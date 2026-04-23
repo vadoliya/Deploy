@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MovieBooking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: black;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: red;
+}
+
+.logo span {
+  color: white;
+}
+
+.location {
+  font-size: 14px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links li:hover,
+.nav-links .active {
+  color: red;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url('https://assets-in.bmscdn.com/moviesmaster/assets/nycg/nyc_amor_audi__1740122879405.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: red;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* MOVIES */
+.movies {
+  padding: 40px 50px;
+}
+
+.movie-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  width: 200px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.rating {
+  background: red;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.price {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #00ffcc;
+}
+
+.book-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: darkred;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Movie<span>Booking</span></div>
+  <div class="location">📍 Jamnagar <small>Gujarat</small></div>
+
+  <ul class="nav-links">
+    <li class="active">Home</li>
+    <li>Movies</li>
+    <li>Events</li>
+    <li>Contact Us</li>
+    <li>Login</li>
+    <li>Sign Up</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>BOOK YOUR FAVORITE MOVIES & EVENTS</h1>
+    <p>Experience the magic of cinema and live events</p>
+    <button>Explore Movies</button>
+  </div>
+</section>
+
+<!-- MOVIES -->
+<section class="movies">
+  <h2>Now Showing</h2>
+
+  <div class="movie-container">
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA8fxJgOk6Q4UGjmsa1q3CQ1Q05Lt0Dn1leAl6_KexCEjqJAe6">
+      <div class="card-content">
+        <h3>Jawan <span class="rating">7.0</span></h3>
+        <div class="price">₹250</div>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOHA0DTAKNAhDRUKyhxR2U6iokt9boztD3ur53XbnoOGkzBm9C-qckStDmlMnJZvYDFAM&s=10">
+      <div class="card-content">
+        <h3>Pathaan <span class="rating">6.5</span></h3>
+        <div class="price">₹220</div>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/90/Animal_%282023_film%29_poster.jpg">
+      <div class="card-content">
+        <h3>Animal <span class="rating">7.2</span></h3>
+        <div class="price">₹300</div>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbGp4Z-5N_jeiUvIrzXJC_VBJnICjcxPePFZfdCyF-YFo989caoqa3edjH8oGY86sjJEIiXg&s=10">
+      <div class="card-content">
+        <h3>Dhurandhar <span class="rating">9.0</span></h3>
+        <div class="price">₹350</div>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
